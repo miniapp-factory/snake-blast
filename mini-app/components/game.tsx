@@ -99,7 +99,7 @@ export default function Game() {
     // Check game over
     const hasEmpty = newGrid.some((row) => row.includes(0));
     const canMerge = newGrid.some((r, i) =>
-      newGrid[r].some((v, j) => {
+      newGrid[i].some((v, j) => {
         if (v === 0) return false;
         if (i + 1 < GRID_SIZE && newGrid[i + 1][j] === v) return true;
         if (j + 1 < GRID_SIZE && newGrid[i][j + 1] === v) return true;
